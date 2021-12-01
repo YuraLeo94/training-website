@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-dialog-container {
+    position: relative;
+}
+
+button {
+    cursor: pointer;
+}
+
+.dialog-button {
+    display: block;
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input[name="amount"] {
+    font-size: 16px;
+    height: 30px;
+    padding-right: 0;
+    margin-right: 0;
+    padding-left: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    outline: none;
+}
+
+.default-button {
+    height: 55px;
+    display: block;
+    border: 1px solid #d3d3d3;
+    outline: none;
+    background-color: #d3d3d3;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+// overwriting input and form styles for order form
+.order-form {
+    mat-form-field .mat-form-field-flex {
+        border: 1px solid #000;
+        border-radius: 2px;
+        padding: 0;
+        background-color: #d3d3d3;
+        align-items: center;
+    }
+
+    .mat-form-field-subscript-wrapper {
+        font-size: 12px;
+    }
+
+    .mat-form-field-infix {
+        background-color: #fff;
+        padding: 1px 0 0 0;
+        border: 0;
+    }
+    
+    .mat-form-field-prefix {
+        padding: 0 10px;
+    }
+}
+
+app-root .mat-divider {
+    margin: 20px 10px 10px 10px;
+    border-top-color: #000;
+    border-top-width: 3px;
+}
