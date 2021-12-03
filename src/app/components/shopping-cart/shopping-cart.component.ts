@@ -10,7 +10,6 @@ import { Cart, CartService } from 'src/app/services/cart.service';
 export class ShoppingCartComponent implements OnInit {
 
   public cartData: Cart;
-  public isCheckout = false;
 
   constructor(private cartService: CartService) { }
 
@@ -18,8 +17,14 @@ export class ShoppingCartComponent implements OnInit {
     this.cartData = this.cartService.cart;
   }
 
-  public disableEnableCheckout(value: boolean): void {
-    this.isCheckout = value;
+  public disableEnableCheckout(): boolean {
+    let isDisableCheckoutButton = false;
+    this.cartData.cartItems.forEach(element => {
+      if (element.ammount === null) {
+        isDisableCheckoutButton = true;
+      }
+    });
+    return isDisableCheckoutButton;
   }
   
 }

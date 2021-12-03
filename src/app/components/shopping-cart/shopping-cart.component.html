@@ -1,15 +1,14 @@
 <div class="cart-wrapper" *ngIf="(cartData.cartItems.length > 0); else emptyMessage">
-    <app-shopping-card class="app-shopping-card" *ngFor="let cartItem of cartData.cartItems;" [cartItem]="cartItem"
-        (disableEnableCheckout)="disableEnableCheckout($event)">
+    <app-shopping-card class="app-shopping-card" *ngFor="let cartItem of cartData.cartItems;" [cartItem]="cartItem">
     </app-shopping-card>
     <mat-divider></mat-divider>
     <label>
         Total coast:
     </label>
     <div class="cost">
-        {{ cartData.totalSum }}
+        {{ cartData.totalSum | displayCost}}
     </div>
-    <button class="checkout-button default-button" mat-button [disabled]="isCheckout"
+    <button class="checkout-button default-button" mat-button [disabled]="disableEnableCheckout()"
         [routerLink]="['/checkout']">Checkout</button>
 </div>
 <ng-template #emptyMessage>

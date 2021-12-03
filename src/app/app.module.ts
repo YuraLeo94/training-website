@@ -26,6 +26,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CheckoutProductCardComponent } from './components/checkout-product-card/checkout-product-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BackButtonComponent } from './components/back-button/back-button.component';
+import { DisplayCost } from './shared/pipe/display-cost.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
     OrderFormComponent,
     CheckoutComponent,
     CheckoutProductCardComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    DisplayCost
   ],
   imports: [
     BrowserModule,

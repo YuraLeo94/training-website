@@ -2,6 +2,6 @@
     <img class="product-img" src={{product.image}} alt={{product.imageAlt}}>
     <mat-card-content>
         <p class="mat-card-content__title">{{ product.title | truncate:50 }}</p>
-        <p class="mat-card-content__cost">{{ product.cost }}$</p>
+        <p class="mat-card-content__cost">{{ product.cost | displayCost }}$</p>
     </mat-card-content>
 </mat-card>

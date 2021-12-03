@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CartItem, CartService } from 'src/app/services/cart.service';
 import { MAX_AMOUNT, MIN_AMOUNT } from 'src/app/shared/global.const';
 
@@ -10,7 +10,6 @@ import { MAX_AMOUNT, MIN_AMOUNT } from 'src/app/shared/global.const';
 export class ShoppingCardComponent implements OnInit {
 
   @Input() cartItem: CartItem;
-  @Output() disableEnableCheckout = new EventEmitter<boolean>();
   public prevAmout: number;
   public minAmount = MIN_AMOUNT;
   public maxAmount = MAX_AMOUNT;
@@ -32,8 +31,6 @@ export class ShoppingCardComponent implements OnInit {
   public onChange(): void {
     this.cartService.updateTotalSum((this.cartItem.ammount - this.prevAmout) * this.cartItem.product.cost);
     this.prevAmout = this.cartItem.ammount;
-
-    this.cartItem.ammount ? this.disableEnableCheckout.emit(false) : this.disableEnableCheckout.emit(true);
   }
 
 }

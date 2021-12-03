@@ -2,7 +2,7 @@
     <img class="product-img" src={{cartItem.product.image}} alt={{cartItem.product.imageAlt}}>
     <mat-card-content>
         <p class="mat-card-content__title">{{ cartItem.product.title | truncate:50 }}</p>
-        <p class="mat-card-content__cost">{{ cartItem.product.cost }}$</p>
+        <p class="mat-card-content__cost">{{ cartItem.product.cost | displayCost }}$</p>
     </mat-card-content>
     <mat-dialog-actions>
         <div class="close" (click)="onDelete()"></div>
