@@ -13,7 +13,7 @@
                 oninput="(validity.valid)||(value='');" [min]="minAmount" [max]="maxAmount" name="amount">
         </div>
         <div class="cost-rating-container">
-            <div class="cost">{{ product.cost | displayCost }}</div>
+            <div class="cost">{{ product.cost | displayCost }}$</div>
             <div>
                 <ngb-rating [max]="maxRating" [(ngModel)]="starRating" [(rate)]="starRating" [readonly]="false"
                     (click)="updateRating()"></ngb-rating>
