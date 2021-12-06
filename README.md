@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 **Note:** Before all steps need to run `npm i`/`npm install`.
 
-**Link for origin repo -** `https://github.com/YuraLeo94/Book-store-Angular-Jurijs`.
+**Link for origin repo -** `[https://github.com/YuraLeo94/Book-store-Angular-Jurijs]`(https://github.com/YuraLeo94/Book-store-Angular-Jurijs).
 
 ## Development server
 
