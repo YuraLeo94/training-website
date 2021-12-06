@@ -13,13 +13,14 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ProductService {
-  private productsApiUrl = 'http://localhost:5000/products';
+  private productsApiUrl = 'https://raw.githubusercontent.com/YuraLeo94/BD-Data/master/BookStoreAngular/db.json';
   private _productsData= new BehaviorSubject<Product[]>([]);
   private _detailsOfSelectedProduct = new BehaviorSubject<Product | undefined>(undefined);
 
   constructor(private http: HttpClient) { }
 
-  public getProducts(): Observable<Product[]> {
+  // any type is for getting data from GitHub
+  public getProducts(): Observable<Product[] | any> {
     return this.http.get<Product[]>(this.productsApiUrl);
   }
 

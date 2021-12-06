@@ -35,7 +35,9 @@ export class ProductDetailComponent implements OnInit {
   }
 
   public updateRating(): void {
-    this.productService.updateProduct({ ...this.product, rating: this.starRating }).subscribe();
+    // To update data, you need to get data from the server
+    // Change the link in the product service to http://localhost:5000/products
+    // this.productService.updateProduct({ ...this.product, rating: this.starRating }).subscribe();
   }
 
   private get totalCoast(): number {

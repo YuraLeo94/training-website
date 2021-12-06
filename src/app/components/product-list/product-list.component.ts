@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
     if (productsData.length > 0) {
       this.products = productsData;
     } else {
-      this.productService.getProducts().subscribe(products => (this.products = products)).add(() => (this.productService.productsData = this.products));
+      this.productService.getProducts().subscribe(products => (this.products = products['products'])).add(() => (this.productService.productsData = this.products));
     }
   }
 
